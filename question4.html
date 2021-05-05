@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <script>
+        function validate(){
+            var x = document.forms["myForm"]["firstname"].value;
+            var y = document.forms["myForm"]["check"].checked;
+            if(x == null || x == ""){
+                alert("Please enter your firstname");
+            }
+            else if(y == false){
+              alert("Please mark the checkbox to submit the form");
+            }
+            else{
+                alert("Submitted Successfully");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        <label>Firstname:</label>
+        <input type="text" name="firstname"><br>
+        <label>Check me:</label>
+        <input type="checkbox" name="check"><br>
+        <input type="submit" onclick="validate()" name="submit">
+     </form>   
+</body>
+</html>
